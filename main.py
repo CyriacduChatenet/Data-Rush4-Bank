@@ -1,3 +1,3 @@
-text = 'Hello World!';
-
-print(text);
+import pandas as pd
+data = pd.read_csv("data/data.csv")
+print(data)

@@ -1,0 +1,2 @@
+def calculateKnn():
+    print("KNN")

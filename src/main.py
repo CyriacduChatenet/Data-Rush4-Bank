@@ -25,3 +25,4 @@ encoded_df = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_na
 data_encoded = pd.concat([data.drop(categorical_cols, axis=1), encoded_df], axis=1)
 
 knn.calculateKnn(StandardScaler(),data_encoded,data)
+MatriceCorrelation.calculateCorrelationMatrix(data_encoded)

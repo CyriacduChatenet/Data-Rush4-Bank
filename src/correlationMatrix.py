@@ -1,2 +1,15 @@
-def calculateCorrelationMatrix () :
-    print('Correlation Matrix')
+class MatriceCorrelation :
+    def calculateCorrelationMatrix (data_encoded) :
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        from sklearn.preprocessing import OneHotEncoder
+        # matrice de correlation
+        correlation_matrix = data_encoded.corr()
+
+        plt.figure(figsize=(20, 15))
+        sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+        plt.title('Matrice de Corrélation')
+        plt.tight_layout()
+        plt.show()
+
+        print('Correlation Matrix')

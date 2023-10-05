@@ -8,9 +8,9 @@ import seaborn as sns
 
 import knn
 from correlationMatrix import MatriceCorrelation
-from regressionLogistique import LogisticRegression
+from regressionLogistique import LogisticRegressionAnalysis
 
-logisticRegression = LogisticRegression
+logisticRegression = LogisticRegressionAnalysis
 
 logisticRegression.calculateRegressionLogistique()
 

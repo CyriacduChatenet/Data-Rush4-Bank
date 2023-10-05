@@ -8,7 +8,11 @@ import seaborn as sns
 
 import knn
 import correlationMatrix
-import regressionLogistique
+from regressionLogistique import LogisticRegression
+
+logisticRegression = LogisticRegression
+
+logisticRegression.calculateRegressionLogistique()
 
 # Chargement des données
 data = pd.read_csv('data/data.csv')

@@ -4,7 +4,6 @@ from sklearn.preprocessing import OneHotEncoder
 
 class MatriceCorrelation :
     def calculateCorrelationMatrix (data_encoded) :
-        # matrice de correlation
         correlation_matrix = data_encoded.corr()
 
         plt.figure(figsize=(20, 15))

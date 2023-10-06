@@ -21,6 +21,7 @@ Arg list:
 - sk learn
 
 ## CSV
+csv file is located in data folder. this folder is located at root of project
 example csv file :
 ```
 month,credit_amount,credit_term,age,sex,education,product_type,having_children_flg,region,income,family_status,phone_operator,is_client,bad_client_target

@@ -1,8 +1,9 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import OneHotEncoder
+
 class MatriceCorrelation :
     def calculateCorrelationMatrix (data_encoded) :
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        from sklearn.preprocessing import OneHotEncoder
         # matrice de correlation
         correlation_matrix = data_encoded.corr()
 

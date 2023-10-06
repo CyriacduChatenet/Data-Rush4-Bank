@@ -9,7 +9,7 @@ import seaborn as sns
 
 from knn import Knn
 from correlationMatrix import MatriceCorrelation
-from regressionLogistique import LogisticRegressionAnalysis
+from accuracy import Accuracy
 
 # Chargement des données
 data = pd.read_csv('data/data.csv')
@@ -28,8 +28,8 @@ if __name__ == "__main__":
         elif sys.argv[1] == "two":
             MatriceCorrelation.calculateCorrelationMatrix(data_encoded)
         elif sys.argv[1] == "three":
-            logisticRegression = LogisticRegressionAnalysis
-            logisticRegression.calculateRegressionLogistique(data_encoded)
+            accuracy = Accuracy
+            accuracy.calculateAccuracy(data_encoded)
         else:
             print("fonction inconnu")
     else:

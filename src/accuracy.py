@@ -5,10 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 
-class LogisticRegressionAnalysis:
-    
-    @staticmethod
-    def calculateRegressionLogistique(data_encoded):
+class Accuracy:
+    def calculateAccuracy(data_encoded):
         # Séparer les données en variables indépendantes et dépendantes
         X = data_encoded.iloc[:, :-1].values
         y = data_encoded.iloc[:, -1].values

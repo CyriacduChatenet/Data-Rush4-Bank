@@ -1,0 +1,5 @@
+Meilleure valeur de k: 8 avec une précision de 88.70%
+Recall at best k: 0.07
+Precision at best k: 0.60
+F1-score at best k: 0.13
+Rappel: 0.50

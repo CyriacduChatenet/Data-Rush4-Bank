@@ -1,3 +1,14 @@
+def create_text_file(filename, content):
+    try:
+        # Ouvre le fichier en mode écriture (crée un nouveau fichier s'il n'existe pas)
+        with open(filename, 'w') as file:
+            # Écrit le contenu dans le fichier
+            for ligne in content:
+                file.write(ligne + '\n')
+        print(f"Fichier '{filename}' créé avec succès.")
+    except Exception as e:
+        print(f"Erreur lors de la création du fichier '{filename}': {str(e)}")
+
 def calculateKnn(standardScaler, data_encoded,data):
 
     import pandas as pd
@@ -89,3 +100,7 @@ def calculateKnn(standardScaler, data_encoded,data):
     print(f"Rappel: {recall:.2f}")
 
     print("KNN")
+
+    filename = "report.txt"
+    content = [f"Meilleure valeur de k: {best_k} avec une précision de {max(accuracies)*100:.2f}%", f"Recall at best k: {recalls[best_k - 1]:.2f}", f"Precision at best k: {precisions[best_k - 1]:.2f}", f"F1-score at best k: {f1_scores[best_k - 1]:.2f}", f"Rappel: {recall:.2f}"]
+    create_text_file(filename, content)

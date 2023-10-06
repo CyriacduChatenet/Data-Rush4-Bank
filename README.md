@@ -3,6 +3,19 @@ Epitech Digital : data piscine rush 4
 
 [![python](https://img.shields.io/badge/Python-3572A5?style=for-the-badge&logo=python&logoColor=FFFFFF)](https://www.python.org/)
 
+## CLI
+run algorithm
+```
+python3 src/main.py arg
+```
+arg is in arg list
+
+Arg list:
+- one: run knn file
+- two: run correlation matrix
+- three: run logistic regression
+- four run linear regression
+
 ## Packages :
 - pandas
 - sk learn

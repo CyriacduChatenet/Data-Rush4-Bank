@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-import knn
+from knn import Knn
 from correlationMatrix import MatriceCorrelation
 from regressionLogistique import LogisticRegressionAnalysis
 
@@ -20,10 +20,11 @@ encoder = OneHotEncoder(drop='first')
 encoded_data = encoder.fit_transform(data[categorical_cols])
 encoded_df = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_names_out(categorical_cols))
 data_encoded = pd.concat([data.drop(categorical_cols, axis=1), encoded_df], axis=1)
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:  # Vérifiez si des arguments ont été fournis
         if sys.argv[1] == "one":
-            knn.calculateKnn(StandardScaler(),data_encoded,data)
+            Knn.calculateKnn(StandardScaler(),data_encoded,data)
         elif sys.argv[1] == "two":
             MatriceCorrelation.calculateCorrelationMatrix(data_encoded)
         elif sys.argv[1] == "three":

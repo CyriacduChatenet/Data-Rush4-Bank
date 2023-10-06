@@ -9,7 +9,7 @@ class LogisticRegressionAnalysis:
     
     @staticmethod
     def calculateRegressionLogistique(data_encoded):
-           # Séparer les données en variables indépendantes et dépendantes
+        # Séparer les données en variables indépendantes et dépendantes
         X = data_encoded.iloc[:, :-1].values
         y = data_encoded.iloc[:, -1].values
         

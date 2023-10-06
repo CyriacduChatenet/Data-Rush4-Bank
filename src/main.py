@@ -12,7 +12,7 @@ from correlationMatrix import MatriceCorrelation
 from regressionLogistique import LogisticRegressionAnalysis
 
 # Chargement des données
-data = pd.read_csv('../data/data.csv')
+data = pd.read_csv('data/data.csv')
 
 # Encodage One-Hot des variables catégorielles
 categorical_cols = ['sex', 'education', 'product_type', 'family_status']
@@ -26,7 +26,7 @@ if __name__ == "__main__":
             knn.calculateKnn(StandardScaler(),data_encoded,data)
         elif sys.argv[1] == "two":
             MatriceCorrelation.calculateCorrelationMatrix(data_encoded)
-        elif sys.argv[1] == "tree":
+        elif sys.argv[1] == "three":
             logisticRegression = LogisticRegressionAnalysis
             logisticRegression.calculateRegressionLogistique(data_encoded)
         else:

@@ -6,3 +6,11 @@ Epitech Digital : data piscine rush 4
 ## Packages :
 - pandas
 - sk learn
+
+## Warning
+You can change manually k value in ```main.py``` file :
+```
+Knn.calculateKnn(StandardScaler(),data_encoded,data, 4)
+```
+
+By default third param is empty fixed_k value is optionnal param for test. the algorithme search automatically k value

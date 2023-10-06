@@ -24,7 +24,7 @@ data_encoded = pd.concat([data.drop(categorical_cols, axis=1), encoded_df], axis
 if __name__ == "__main__":
     if len(sys.argv) > 1:  # Vérifiez si des arguments ont été fournis
         if sys.argv[1] == "one":
-            Knn.calculateKnn(StandardScaler(),data_encoded,data, 4)
+            Knn.calculateKnn(StandardScaler(),data_encoded,data)
         elif sys.argv[1] == "two":
             MatriceCorrelation.calculateCorrelationMatrix(data_encoded)
         elif sys.argv[1] == "three":

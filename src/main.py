@@ -10,6 +10,7 @@ import seaborn as sns
 from knn import Knn
 from correlationMatrix import MatriceCorrelation
 from accuracy import Accuracy
+from linearRegression import MyLinearRegression
 
 # Chargement des données
 data = pd.read_csv('data/data.csv')
@@ -30,6 +31,9 @@ if __name__ == "__main__":
         elif sys.argv[1] == "three":
             accuracy = Accuracy
             accuracy.calculateAccuracy(data_encoded)
+        elif sys.argv[1] == "four":
+            linearRegression = MyLinearRegression
+            linearRegression.calculateLinearRegression(data_encoded,data)
         else:
             print("fonction inconnu")
     else:

@@ -3,6 +3,7 @@ import seaborn as sns
 from sklearn.preprocessing import OneHotEncoder
 
 class MatriceCorrelation :
+    @staticmethod
     def calculateCorrelationMatrix (data_encoded) :
         correlation_matrix = data_encoded.corr()
 
